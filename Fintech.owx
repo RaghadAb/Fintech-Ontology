@@ -1,0 +1,496 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/mohamed/ontologies/2024/5/fintech"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/mohamed/ontologies/2024/5/fintech">
+    <Prefix name="" IRI="http://www.semanticweb.org/mohamed/ontologies/2024/5/fintech/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>This is an Ontology on Fintech</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Asset"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Blockchain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Client"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Compliance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Crowdfunding"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cryptocurrency"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fintech"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HealthInsurance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HomeInsurance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InsuranceType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Insurtech"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Investor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LendingPlatforms"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PaymentSystems"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Project"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Regtech"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RoboAdvisors"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SuccessRate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Technology"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#advises"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#attracts"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSuccessRate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#implements"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#insures"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#investsIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#provides"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#regulates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#uses"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AMLCompliance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Blockchain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ComplyAdvantage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HomeInsurance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kickstarter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lemonade"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LendingClub"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LoanService"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RetailClient"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TechnologyProject"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wealthfront"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Blockchain"/>
+        <Class IRI="#PaymentSystems"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Crowdfunding"/>
+        <Class IRI="#Fintech"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Crowdfunding"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Fintech"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#attracts"/>
+                <Class IRI="#Investor"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasSuccessRate"/>
+                <Class IRI="#SuccessRate"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#investsIn"/>
+                <Class IRI="#Project"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cryptocurrency"/>
+        <Class IRI="#PaymentSystems"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cryptocurrency"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PaymentSystems"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#implements"/>
+                <Class IRI="#Blockchain"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cryptocurrency"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implements"/>
+            <Class IRI="#Blockchain"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HealthInsurance"/>
+        <Class IRI="#InsuranceType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HomeInsurance"/>
+        <Class IRI="#InsuranceType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InsuranceType"/>
+        <Class IRI="#Asset"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Insurtech"/>
+        <Class IRI="#Fintech"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Insurtech"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Fintech"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#insures"/>
+                <Class IRI="#HealthInsurance"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#insures"/>
+                <Class IRI="#HomeInsurance"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Insurtech"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#insures"/>
+            <Class IRI="#Asset"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LendingPlatforms"/>
+        <Class IRI="#Fintech"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LendingPlatforms"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Fintech"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#provides"/>
+                <Class IRI="#Service"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PaymentSystems"/>
+        <Class IRI="#Fintech"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PaymentSystems"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Fintech"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#uses"/>
+                <Class IRI="#Technology"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Regtech"/>
+        <Class IRI="#Fintech"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Regtech"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Fintech"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#regulates"/>
+                <Class IRI="#Compliance"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#uses"/>
+                <Class IRI="#Technology"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoboAdvisors"/>
+        <Class IRI="#Fintech"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoboAdvisors"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Fintech"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#advises"/>
+                <Class IRI="#Client"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#attracts"/>
+                <Class IRI="#Investor"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Crowdfunding"/>
+        <Class IRI="#Insurtech"/>
+        <Class IRI="#LendingPlatforms"/>
+        <Class IRI="#PaymentSystems"/>
+        <Class IRI="#Regtech"/>
+        <Class IRI="#RoboAdvisors"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Compliance"/>
+        <NamedIndividual IRI="#AMLCompliance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Blockchain"/>
+        <NamedIndividual IRI="#Blockchain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Regtech"/>
+        <NamedIndividual IRI="#ComplyAdvantage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Asset"/>
+        <NamedIndividual IRI="#HomeInsurance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Crowdfunding"/>
+        <NamedIndividual IRI="#Kickstarter"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Insurtech"/>
+        <NamedIndividual IRI="#Lemonade"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LendingPlatforms"/>
+        <NamedIndividual IRI="#LendingClub"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Service"/>
+        <NamedIndividual IRI="#LoanService"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Client"/>
+        <NamedIndividual IRI="#RetailClient"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Project"/>
+        <NamedIndividual IRI="#TechnologyProject"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RoboAdvisors"/>
+        <NamedIndividual IRI="#Wealthfront"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#implements"/>
+        <NamedIndividual IRI="#Blockchain"/>
+        <NamedIndividual IRI="#Blockchain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#regulates"/>
+        <NamedIndividual IRI="#ComplyAdvantage"/>
+        <NamedIndividual IRI="#AMLCompliance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#investsIn"/>
+        <NamedIndividual IRI="#HomeInsurance"/>
+        <NamedIndividual IRI="#TechnologyProject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#investsIn"/>
+        <NamedIndividual IRI="#Kickstarter"/>
+        <NamedIndividual IRI="#TechnologyProject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#insures"/>
+        <NamedIndividual IRI="#Lemonade"/>
+        <NamedIndividual IRI="#HomeInsurance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#provides"/>
+        <NamedIndividual IRI="#LendingClub"/>
+        <NamedIndividual IRI="#LoanService"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#advises"/>
+        <NamedIndividual IRI="#Wealthfront"/>
+        <NamedIndividual IRI="#RetailClient"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#advises"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#attracts"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSuccessRate"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#implements"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#insures"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#investsIn"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#provides"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#regulates"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#uses"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#advises"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#insures"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#regulates"/>
+    </InverseFunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#advises"/>
+        <Class IRI="#RoboAdvisors"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#attracts"/>
+        <Class IRI="#Fintech"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSuccessRate"/>
+        <Class IRI="#Crowdfunding"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#implements"/>
+        <Class IRI="#PaymentSystems"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#insures"/>
+        <Class IRI="#Insurtech"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#investsIn"/>
+        <Class IRI="#Crowdfunding"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#provides"/>
+        <Class IRI="#Fintech"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#regulates"/>
+        <Class IRI="#Regtech"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#uses"/>
+        <Class IRI="#Fintech"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#advises"/>
+        <Class IRI="#Client"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#attracts"/>
+        <Class IRI="#Investor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSuccessRate"/>
+        <Class IRI="#SuccessRate"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#implements"/>
+        <Class IRI="#Blockchain"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#insures"/>
+        <Class IRI="#Asset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#investsIn"/>
+        <Class IRI="#Project"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#provides"/>
+        <Class IRI="#Service"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#regulates"/>
+        <Class IRI="#Compliance"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#uses"/>
+        <Class IRI="#Technology"/>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
